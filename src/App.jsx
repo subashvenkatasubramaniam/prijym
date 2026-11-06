@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Preloader from './components/layout/Preloader';
 import About from './pages/About';
 import Blog2 from './pages/Blog2';
@@ -33,7 +34,7 @@ import Testimonials from './pages/Testimonials';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Preloader />
       <Routes>
         <Route path="/about" element={<About />} />
@@ -67,7 +68,7 @@ export default function App() {
         <Route path="/team" element={<Team />} />
         <Route path="/testimonials" element={<Testimonials />} />
         <Route path="*" element={<ErrorPage />} />
-      </Routes>
-    </BrowserRouter>
+        </Routes>
+    </HashRouter>
   );
 }
